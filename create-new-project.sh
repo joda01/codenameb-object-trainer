@@ -1,10 +1,14 @@
 read -p "Enter project name: " projectname
 mkdir -p `pwd`/projects/$projectname
+
 mkdir -p `pwd`/projects/$projectname/valid/images
 mkdir -p `pwd`/projects/$projectname/valid/labels
 
 mkdir -p `pwd`/projects/$projectname/train/images
 mkdir -p `pwd`/projects/$projectname/train/labels
+
+mkdir -p `pwd`/projects/$projectname/test/images
+mkdir -p `pwd`/projects/$projectname/test/labels
 
 mkdir -p `pwd`/projects/$projectname/result
 

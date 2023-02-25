@@ -33,3 +33,6 @@ Package to train object detection model for biological problems
 
 1) Go to `projects/<PROJECT NAME>/data.yaml` and enter the labels of your training data.
 2) Execute `start-training.sh`
+
+---
+https://blog.paperspace.com/train-yolov5-custom-data/
