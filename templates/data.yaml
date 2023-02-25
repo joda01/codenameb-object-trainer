@@ -1,0 +1,5 @@
+train: /workspaces/open-bio-image-trainer/projects/<PROJECT-NAME>/train/images
+val: /workspaces/open-bio-image-trainer/projects/<PROJECT-NAME>/valid/images
+
+nc: 1
+names: ['nucleus']
