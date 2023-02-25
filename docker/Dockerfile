@@ -16,6 +16,6 @@ RUN  apt-get update && \
 
 RUN pip install --upgrade pip
 RUN ln -s /usr/bin/python3 /usr/bin/python
-RUN git clone -b v1.0.0-alpha1 https://github.com/joda01/yolov5.git &&\
+RUN git clone -b v1.0.0-alpha01 https://github.com/joda01/yolov5.git &&\
     cd yolov5/ &&\
     pip install -r requirements.txt

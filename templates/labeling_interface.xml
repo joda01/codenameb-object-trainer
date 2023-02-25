@@ -1,0 +1,10 @@
+<View>
+  <Image name="image_object" value="$value" zoom="true" rotateControl="true" zoomControl="true"/>
+  <Choices name="image_classes" toName="image_object">
+    
+  <Choice value="nucleus"/></Choices>
+  
+  <RectangleLabels name="label" toName="image_object">
+    <Label value="nucleus" background="green"/>
+  </RectangleLabels>
+</View>
