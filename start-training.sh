@@ -17,5 +17,7 @@ cd /workspaces/open-bio-image-trainer
 
 python /yolov5/train.py --img 640 --batch 1 --epochs 10 --data `pwd`/projects/$projectname/data.yaml --weights '' --cfg yolov5s.yaml --device cpu --workers 1  --project `pwd`/projects/$projectname --name $projectname
 
-
-
+#
+# Convert to ONNX
+#
+python /yolov5/export.py --weights `pwd`/projects/$projectname/$projectname/weights/best.pt --include torchscript onnx
