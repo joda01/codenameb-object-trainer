@@ -2,10 +2,17 @@
 
 Package to train object detection model for biological problems
 
+## Start
+
+1) Install Visual Studio Code and the remote container plugin
+2) Open the folder
+3) Reopen project in container
+
+
 ## Create training data
 
 1) Execute `create-new-project.sh`
-2) Execute `start-label-studio.sh`
+2) Execute `start-label-studio.sh` from a separate terminal.
 3) Open a browser and type `http://127.0.0.1:8080`
 4) Use any e-mail and password to login
 5) Create new project
