@@ -20,6 +20,6 @@ python /yolov5/train.py --img 640 --batch 16 --epochs 256 --data `pwd`/projects/
 #
 # Convert to ONNX
 #
-python /yolov5/export.py --weights `pwd`/projects/$projectname/$projectname/weights/best.pt --include torchscript onnx
+#python /yolov5/export.py --weights `pwd`/projects/$projectname/$projectname/weights/best.pt --include torchscript onnx
 
-python /yolov5/export.py --weights `pwd`/projects/nucleus/result/weights/best.pt --include torchscript onnx
+python /yolov5/export.py --weights `pwd`/projects/nucleus02/result2/weights/best.pt --include torchscript onnx --opset 12
