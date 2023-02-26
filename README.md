@@ -56,10 +56,14 @@ sudo systemctl restart docker
 - Add the argument `--device 0` to the `start-training.sh`
 
 
----
-https://blog.paperspace.com/train-yolov5-custom-data/
-
-
 # Todos
 
-`https://ultralytics.com/assets/Arial.ttf to /root/.config/Ultralytics/Arial.ttf`
+- [ ] `https://ultralytics.com/assets/Arial.ttf to /root/.config/Ultralytics/Arial.ttf`
+
+---
+*References*  
+
+https://blog.paperspace.com/train-yolov5-custom-data/  
+https://github.com/ultralytics/yolov5/issues/475
+
+
