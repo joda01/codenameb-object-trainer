@@ -9,17 +9,20 @@
 #               --exist-ok
 #
 
+# If you have no GPU replace --device 0 with --device cpu
+
+
 read -p "Enter project name: " projectname
 
 cd /yolov5
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 cd /workspaces/open-bio-image-trainer
 
-python /yolov5/train.py --img 640 --batch 16 --epochs 256 --data `pwd`/projects/$projectname/data.yaml --weights yolov5m.pt --cfg yolov5m.yaml --device cpu --workers 1  --project `pwd`/projects/$projectname --name result
+python /yolov5/train.py --img 640 --batch 16 --epochs 256 --data `pwd`/projects/$projectname/data.yaml --weights yolov5m.pt --cfg yolov5m.yaml --device cpu --workers 1  --project `pwd`/projects/$projectname --name result --device 0
+
+
 
 #
 # Convert to ONNX
 #
-#python /yolov5/export.py --weights `pwd`/projects/$projectname/$projectname/weights/best.pt --include torchscript onnx
-
-python /yolov5/export.py --weights `pwd`/projects/nucleus02/result2/weights/best.pt --include torchscript onnx --opset 12
+#python /yolov5/export.py --weights `pwd`/projects/nucleus02/result2/weights/best.pt --include torchscript onnx --opset 12
