@@ -55,6 +55,7 @@ sudo systemctl restart docker
 - When starting the docker container add `--gpus=all` argument
 - Add the argument `--device 0` to the `start-training.sh`
 
+Use `nvtop` to show gpu usage
 
 # Todos
 
