@@ -18,7 +18,7 @@ cd /yolov5
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 cd /workspaces/open-bio-image-trainer
 
-python /yolov5/train.py --img 640 --batch 16 --epochs 256 --data `pwd`/projects/$projectname/data.yaml --weights yolov5m.pt --cfg yolov5m.yaml --device cpu --workers 1  --project `pwd`/projects/$projectname --name result --device 0
+python /yolov5/train.py --img 640 --batch 8 --epochs 256 --data `pwd`/projects/$projectname/data.yaml --weights yolov5m.pt --cfg yolov5m.yaml --device cpu --workers 1  --project `pwd`/projects/$projectname --name result --device 0
 
 
 
@@ -26,3 +26,5 @@ python /yolov5/train.py --img 640 --batch 16 --epochs 256 --data `pwd`/projects/
 # Convert to ONNX
 #
 #python /yolov5/export.py --weights `pwd`/projects/nucleus02/result2/weights/best.pt --include torchscript onnx --opset 12
+
+#python /yolov5/export.py --weights `pwd`/projects/cell-brightfield-02/result3/weights/best.pt --include torchscript onnx --opset 12
