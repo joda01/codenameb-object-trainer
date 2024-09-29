@@ -1,4 +1,4 @@
-# open-bio-image-trainer
+# imagec-ai-training
 
 Package to train object detection model for biological problems
 
@@ -27,6 +27,7 @@ Package to train object detection model for biological problems
 ![doc/03_export.png](doc/03_export.png)
 12) Unzip the downloaded folder and split the data in train and valid.
 13) Copy the images and labels to the folders `train/images` and `train/labels` and `valid/images` and `valid/labels` 
+
 
 
 ## Start the training

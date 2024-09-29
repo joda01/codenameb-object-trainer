@@ -16,12 +16,13 @@ read -p "Enter project name: " projectname
 
 cd /yolov5
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
-cd /workspaces/open-bio-image-trainer
+cd /workspaces/imagec-ai-training
 
 
 #python /yolov5/segment/train.py --model yolov5m-seg.pt --data coco128-seg.yaml --epochs 5 --img 640
 
-python /yolov5/segment/train.py --img 640 --batch 1 --epochs 256 --data `pwd`/projects/$projectname/data.yaml --weights yolov5m-seg.pt --cfg yolov5m-seg.yaml --device 0 --workers 1  --project `pwd`/projects/$projectname --name result
+export 'PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:512'
+python /yolov5/segment/train.py --resume --img 1280 --batch 1 --epochs 800 --data `pwd`/projects/$projectname/data.yaml --imgsz 1024 --cache disk --weights yolov5l-seg.pt --cfg yolov5l-seg.yaml --workers 0 --device 0 --project `pwd`/projects/$projectname --name result
 
 #
 # Convert to ONNX
@@ -35,3 +36,6 @@ python /yolov5/segment/train.py --img 640 --batch 1 --epochs 256 --data `pwd`/pr
 
 #python /yolov5/export.py --weights `pwd`/projects/cell-brightfield-02/result4/weights/best.pt --include torchscript onnx --opset 12
 #python /yolov5/export.py --weights `pwd`/projects/cell-brightfield-02/result5/weights/best.pt --include torchscript onnx --opset 12
+
+
+#python /yolov5/export.py --weights `pwd`/projects/cells/result5/weights/best.pt --include torchscript onnx --opset 12
